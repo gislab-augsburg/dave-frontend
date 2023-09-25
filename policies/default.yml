@@ -14,6 +14,7 @@ licensing:
       - GPL-*
       - LGPL-*
       - AGPL-*
+      - MIT-*
 
   warnings:
     # Warning is the dependency isn't known
