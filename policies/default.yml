@@ -15,9 +15,10 @@ licensing:
       - LGPL-*
       - AGPL-*
 
-  warnings:
+  ignores:
     # Warning is the dependency isn't known
     ids:
+      - Other
       - NA
 
   # General Dependency Alerts
