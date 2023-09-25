@@ -42,4 +42,4 @@ jobs:
           node-version: 16
 
       - name: Build with Maven
-        run: mvn -B verify -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN
+        run: mvn -B verify "-Dspring-boot.run.jvmArguments=-Dfile.encoding=UTF-8" -DskipTests=true
