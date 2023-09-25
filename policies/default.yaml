@@ -1,9 +1,9 @@
-name: Default Policy
+name: it@M Default Policy
 
 codescanning:
   level: error
 
-# Dependency Security Alters
+# Dependency Security Alerts
 dependabot:
   level: high
 
@@ -14,25 +14,21 @@ licensing:
       - GPL-*
       - LGPL-*
       - AGPL-*
-      - MIT-*
 
   warnings:
     # Warning is the dependency isn't known
     ids:
       - Other
-
-  ignores:
-    # Warning is the dependency isn't known
-    ids:
-      - none
       - NA
 
-  # General Dependency Alerts
-  # dependencies:
-  # warnings:
-  #   ids:
-  #     - Maintenance
-  #     - Organization
+  ignores:
+    names:
+      - pkg:npm/load-script@1.0.0
+      - npm/slash@1.0.0
+      - slash@1.0.0
+      - slash*
+    ids:
+      - GPL-2.0-or-later
 
 secretscanning:
   level: all
