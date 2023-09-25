@@ -18,11 +18,10 @@ licensing:
   warnings:
     # Warning is the dependency isn't known
     ids:
-      - Other
       - NA
 
-# General Dependency Alerts
-# dependencies:
+  # General Dependency Alerts
+  # dependencies:
   # warnings:
   #   ids:
   #     - Maintenance
