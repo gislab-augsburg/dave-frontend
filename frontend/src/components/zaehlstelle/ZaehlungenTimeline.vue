@@ -57,8 +57,8 @@
         >
             <nicht-ausgewaehlte-zaehlung
                 v-for="(z, index) in filteredZaehlungen"
-                :key="z.id"
                 :id="z.id"
+                :key="z.id"
                 :datum="z.datum"
                 :projekt-name="z.projektName"
                 :zaehlart="z.zaehlart"

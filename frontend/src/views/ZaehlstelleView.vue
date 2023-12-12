@@ -3,6 +3,12 @@
         fluid
         class="pa-0"
     >
+        <a
+            href="file:///U:/work/01_Projekte/30_DAVe/Lapas/Lapas_Karte_Detektorlage1.png"
+            target="_blank"
+            >Lageplan</a
+        >
+
         <v-row no-gutters>
             <v-col cols="3">
                 <v-sheet

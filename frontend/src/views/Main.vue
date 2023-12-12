@@ -38,6 +38,22 @@
                         small
                         color="secondary"
                         v-bind="attrs"
+                        @click="loadData"
+                        v-on="on"
+                    >
+                        <v-icon>mdi-file-delimited</v-icon>
+                    </v-btn>
+                </template>
+                <span>LoadData</span>
+            </v-tooltip>
+            <v-tooltip left>
+                <template #activator="{ on, attrs }">
+                    <v-btn
+                        fab
+                        dark
+                        small
+                        color="secondary"
+                        v-bind="attrs"
                         @click="printSearchResult"
                         v-on="on"
                     >
@@ -75,6 +91,7 @@ import ImageAsset from "@/types/pdfreport/assets/ImageAsset";
 /* eslint-disable no-unused-vars */
 import ZaehlstelleKarteDTO from "@/types/zaehlstelle/ZaehlstelleKarteDTO";
 import TooltipDTO from "@/types/TooltipDTO";
+import ZaehlstellenService from "@/api/service/ZaehlstellenService";
 /* eslint-enable no-unused-vars */
 
 @Component({
@@ -107,6 +124,30 @@ export default class App extends Vue {
             .finally(() => {
                 this.creatingPicture = false;
             });
+    }
+
+    loadData(): void {
+        // measure duration
+        const start = performance.now();
+        ZaehlstellenService.loadData().then((data) => {
+            // measure duration
+            const end = performance.now();
+            console.log("duration: " + (end - start));
+            console.log(data.data);
+            // let csvContent =
+            //     "data:text/plain;charset=utf-8," +
+            //     data.data.join("\n") +
+            //     "\nDURATION: " +
+            //     (end - start);
+            //
+            // let encodedUri = encodeURI(csvContent);
+            // let link = document.createElement("a");
+            // link.setAttribute("href", encodedUri);
+            // link.setAttribute("download", `data.txt`);
+            // document.body.appendChild(link); // Required for FF
+            //
+            // link.click();
+        });
     }
 
     /**

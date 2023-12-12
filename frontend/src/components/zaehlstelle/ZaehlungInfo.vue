@@ -93,6 +93,13 @@
                                 :knotenarme="knotenarme"
                             ></zaehlung-geometrie>
                         </v-col>
+                        <v-col>
+                            <a
+                                href="file:///U:/work/01_Projekte/30_DAVe/Lapas"
+                                target="_blank"
+                                >Lageplan</a
+                            >
+                        </v-col>
                     </v-row>
                 </v-sheet>
             </v-col>

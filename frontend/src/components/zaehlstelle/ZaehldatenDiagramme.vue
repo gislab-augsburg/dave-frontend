@@ -308,6 +308,27 @@
                 <span>PDF Report Menü öffnen</span>
             </v-tooltip>
             <v-tooltip left>
+                <!--template #activator="{ on, attrs }">
+                    <v-btn
+                        fab
+                        dark
+                        small
+                        color="secondary"
+                        v-bind="attrs"
+                        @click="openPdfReportDialog"
+                        v-on="on"
+                    >
+                        <v-icon>mdi-file-chart</v-icon>
+                    </v-btn>
+                </template-->
+                <a
+                    href="file:///U:/work/01_Projekte/30_DAVe/Lapas/Lapas Karte Detektorlage1.png"
+                    target="_"
+                    >Lageplan</a
+                >
+                <span>Lageplan</span>
+            </v-tooltip>
+            <v-tooltip left>
                 <template #activator="{ on, attrs }">
                     <v-btn
                         fab
@@ -346,6 +367,11 @@
             @close="closePdfReportDialog"
         >
         </PdfReportMenue>
+        <a
+            href="file:///U:/work/01_Projekte/30_DAVe/Lapas/Lapas Karte Detektorlage1.png"
+            target="_"
+            >Lageplan</a
+        >
     </v-sheet>
 </template>
 <script lang="ts">
